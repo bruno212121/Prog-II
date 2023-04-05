@@ -14,7 +14,7 @@ public class InputVerfication {
                 number = scanner.nextDouble();
                 isNumber = true;
             } catch (Exception e) {
-                System.out.println("Enter a valid number");
+                System.out.println(Constans.INVALID_NUMBER);
                 scanner.next();
             }
         }

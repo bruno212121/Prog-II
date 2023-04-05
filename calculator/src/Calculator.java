@@ -17,7 +17,7 @@ public class Calculator {
                 result = operating1 / operating2;
                 break;
             default:
-                System.out.println("Operacion no valida");
+                System.out.println(Constans.INVALID_OPERATION_MESSAGE);
                 break;
         }
         return result;
