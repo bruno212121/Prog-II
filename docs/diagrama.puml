@@ -1,0 +1,50 @@
+@startuml
+
+class Menu {
+  - calculadora: Calculadoraa
+  
+  + Menu()
+  + mostrarMenu(): void
+  + mostrarResultados(): void
+}
+
+Menu --> Calculadora
+
+class Calculadora {
+  - operaciones: String
+  
+  + agregarNumero(num: numero): void
+  + agregarOperacion(operacion: String): void
+
+  
+  - sumar(a: numero, b: numero): numero
+  - restar(a: numero, b: numero): numero
+  - multiplicar(a: numero, b: numero): numero
+  - dividir(a: numero, b: numero): numero
+}
+
+Calculadora --> Numero
+
+class Numero {
+  - size: int
+  
+  + add(value: Object): void
+  + get(index: int): Object
+  + remove(index: int): void
+}
+
+
+class Operacion {
+  - operacion: int
+  - resultado: numero
+  
+  + operacion(operacion: String, resultado: numero): void
+  + getOperacion(): int
+  + getResultado(): numero
+}
+
+Calculadora --> "Operacion"
+Numero --> "Operacion"
+
+@enduml
+
